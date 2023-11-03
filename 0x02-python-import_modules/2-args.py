@@ -7,5 +7,5 @@ if __name__ == "__main__":
         print("0 arguments.")
     else:
         print(f"{n} argument{('s' if (n > 1) else '')}:")
-        for i in range(n):
-            print(f"{i + 1}: {sys.argv[i]}")
+        for i in range(1, n + 1):
+            print(f"{i}: {sys.argv[i]}")
