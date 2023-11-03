@@ -6,6 +6,6 @@ if __name__ == "__main__":
     if n == 0:
         print("0 arguments.")
     else:
-        print(f"{n} argument{('s' if (n > 1) else '')}:")
+        print("{:d} argument{:s}:".format(n, ('s' if (n > 1) else '')))
         for i in range(1, n + 1):
-            print(f"{i}: {sys.argv[i]}")
+            print("{:d}: {:s}".format(i, sys.argv[i]))
