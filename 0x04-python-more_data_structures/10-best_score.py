@@ -1,3 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    return max(a_dictionary.values())
+    if a_dictionary == None:
+        return (None)
+    m_ = max(a_dictionary, key=lambda x:a_dictionary[x])
+    return m_
