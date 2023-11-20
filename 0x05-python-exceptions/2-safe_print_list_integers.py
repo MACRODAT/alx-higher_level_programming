@@ -9,9 +9,7 @@ def safe_print_list_integers(my_list=[], x=0):
             p += 1
         except (TypeError, ValueError):
             pass
-        except Exception as e:
-            print()
-            return p
+
         i += 1
     print()
     return p
