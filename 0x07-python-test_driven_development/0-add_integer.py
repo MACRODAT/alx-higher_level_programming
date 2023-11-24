@@ -5,10 +5,11 @@
 def add_integer(a, b=98):
     """add of a
 
-    Float arguments are typecasted to ints before addition is performed.
+    The addition operation for float values involves converting the floating 
+    point numbers into integers prior to performing the calculation.
 
     Raises:
-        TypeError: If either of a or b is a non-integer and non-float.
+        In case one of the input arguments is not an integer or a float, a TypeError will be raised.
     """
     if ((not isinstance(a, int) and not isinstance(a, float))):
         raise TypeError("a must be an integer")
