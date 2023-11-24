@@ -20,16 +20,16 @@ def matrix_divided(matrix, div):
             not all(isinstance(rw, list) for rw in matrix) or
             not all((isinstance(elms, int) or isinstance(elms, float))
                     for elms in [num for rw in matrix for num in rw])):
-        raise TypeError("Matrix must be a list of lists "
+        raise TypeError("matrix must be a matrix (list of lists) of"
                         "integers/floats")
 
     if not all(len(rw) == len(matrix[0]) for rw in matrix):
-        raise TypeError("All rows in the matrix must have the same length.")
+        raise TypeError("Each row of the matrix must have the same size")
 
     if not isinstance(div, int) and not isinstance(div, float):
-        raise TypeError("Divisor must be an integer or a floating-point number.")
+        raise TypeError("div must be a number")
 
     if div == 0:
-        raise ZeroDivisionError("Cannot divide by zero")
+        raise ZeroDivisionError("division by zero")
 
     return ([list(map(lambda x: round(x / div, 2), rw)) for rw in matrix])
