@@ -3,12 +3,7 @@
 
 
 class Rectangle:
-    """rectangle.
-    Attributes:
-        number_of_instances (int): nbr
-    """
-
-    number_of_instances = 0
+    """rectangle."""
 
     def __init__(self, width=0, height=0):
         """Init.
@@ -17,7 +12,6 @@ class Rectangle:
             width (i): The width.
             height (i): The height.
         """
-        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -76,6 +70,5 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """deletion"""
-        type(self).number_of_instances -= 1
+        """msg when deletion"""
         print("Bye rectangle...")

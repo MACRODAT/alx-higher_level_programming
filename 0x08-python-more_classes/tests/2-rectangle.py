@@ -3,12 +3,7 @@
 
 
 class Rectangle:
-    """rectangle.
-    Attributes:
-        number_of_instances (int): nbr
-    """
-
-    number_of_instances = 0
+    """rectangle."""
 
     def __init__(self, width=0, height=0):
         """Init.
@@ -17,7 +12,6 @@ class Rectangle:
             width (i): The width.
             height (i): The height.
         """
-        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -56,26 +50,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
-
-    def __str__(self):
-        """printable repr"""
-        if self.__width * self.__height == 0:
-            return ("")
-
-        rect = []
-        for _ in range(self.__height):
-            [rect.append('#') for _ in range(self.__width)]
-            rect.append("\n")
-        rect = rect[:-1]
-        return ("".join(rect))
-
-    def __repr__(self):
-        """string repr"""
-        rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height) + ")"
-        return (rect)
-
-    def __del__(self):
-        """deletion"""
-        type(self).number_of_instances -= 1
-        print("Bye rectangle...")
