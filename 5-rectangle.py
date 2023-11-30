@@ -3,14 +3,7 @@
 
 
 class Rectangle:
-    """rectangle.
-    Attributes:
-        number_of_instances (int): nbr
-        print_symbol (any): symb
-    """
-
-    number_of_instances = 0
-    print_symbol = "#"
+    """rectangle."""
 
     def __init__(self, width=0, height=0):
         """Init.
@@ -19,7 +12,6 @@ class Rectangle:
             width (i): The width.
             height (i): The height.
         """
-        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -66,7 +58,7 @@ class Rectangle:
 
         rect = []
         for _ in range(self.__height):
-            [rect.append(str(self.print_symbol)) for _ in range(self.__width)]
+            [rect.append('#') for _ in range(self.__width)]
             rect.append("\n")
         rect = rect[:-1]
         return ("".join(rect))
@@ -78,33 +70,5 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """deletion"""
-        type(self).number_of_instances -= 1
+        """msg when deletion"""
         print("Bye rectangle...")
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """Rectangle w greater area.
-
-        Args:
-            rect_1 (Rectangle): The 1 Rectangle.
-            rect_2 (Rectangle): The 2 Rectangle.
-        Raises:
-            TypeError: rect_1 or rect_2 is not a rectangle.
-        """
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() >= rect_2.area():
-            return (rect_1)
-        return (rect_2)
-
-    @classmethod
-    def square(cls, size=0):
-        """new rectangle width and height = size.
-
-        Args:
-            size (int): The width and height
-        """
-        return (cls(size, size))
