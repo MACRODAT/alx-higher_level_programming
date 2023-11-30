@@ -57,7 +57,7 @@ class Rectangle:
             return ("")
 
         rect = []
-        for i in range(self.__height):
+        for _ in range(self.__height):
             [rect.append('#') for _ in range(self.__width)]
             rect.append("\n")
         rect = rect[:-1]
