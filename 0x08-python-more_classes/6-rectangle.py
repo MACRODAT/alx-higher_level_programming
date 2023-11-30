@@ -3,7 +3,10 @@
 
 
 class Rectangle:
-    """rectangle."""
+    """rectangle.
+    Attributes:
+        number_of_instances (int): nbr
+    """
 
     def __init__(self, width=0, height=0):
         """Init.
