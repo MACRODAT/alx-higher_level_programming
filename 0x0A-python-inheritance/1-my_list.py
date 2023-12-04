@@ -4,6 +4,7 @@
 
 
 class MyList(list):
+    """a sub list"""
     def __init__(self):
         """ help here """
         super().__init__()
