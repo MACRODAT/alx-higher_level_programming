@@ -11,7 +11,7 @@ ld = __import__("6-load_from_json_file").load_from_json_file
 
 if __name__ == "__main__":
     try:
-        data = ld("add_item.json")
+        data_lst = ld("add_item.json")
     except e:
         data_lst = []
     data_lst.extend(sys.argv[1:])
