@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-
-""" base help """
+''' Module: 1-my_list
+'''
 
 
 class MyList(list):
-    """a sub list"""
-    def __init__(self):
-        """ help here """
-        super().__init__()
+    ''' Represents a MyList
+    '''
 
     def print_sorted(self):
-        """ print sorted """
+        '''
+        prints the list, but sorted
+        '''
         print(sorted(self))
