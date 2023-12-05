@@ -15,5 +15,5 @@ if __name__ == "__main__":
         data_lst = json.loads(data)
     except e:
         data_lst = []
-    data_lst.extend(sys.argv)
+    data_lst.extend(sys.argv[1:])
     sv(json.dumps(data_lst), "add_item.json")
