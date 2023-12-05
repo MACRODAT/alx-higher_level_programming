@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-''' function that returns an object (Python data structure) represented by a JSON string
+''' str to ibj
 '''
 
 import json
 
 
 def from_json_string(my_str):
-    ''' module from_json_string
-     returns Python objects
+    ''' perfect
+    func
     '''
     return json.loads(my_str)
