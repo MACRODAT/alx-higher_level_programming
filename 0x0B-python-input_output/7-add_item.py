@@ -12,7 +12,7 @@ ld = __import__("6-load_from_json_file").load_from_json_file
 if __name__ == "__main__":
     try:
         data_lst = ld("add_item.json")
-    except e:
+    except FileNotFoundError:
         data_lst = []
     data_lst.extend(sys.argv[1:])
-    sv((data_lst), "add_item.json")
+    sv(data_lst, "add_item.json")
