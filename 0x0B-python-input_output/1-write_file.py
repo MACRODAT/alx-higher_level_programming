@@ -8,4 +8,4 @@ def write_file(filename="", text=""):
     if filename == "":
         return
     with open(filename, "w") as f:
-        f.write(text)
+        return f.write(text)
