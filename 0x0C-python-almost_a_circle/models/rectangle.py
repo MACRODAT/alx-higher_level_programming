@@ -84,3 +84,23 @@ class Rectangle(Base):
             for _ in range(self.width):
                 print("#", end='')
             print()
+
+    def __str__(self) -> str:
+        """ override """
+        return \
+            f"[Rectangle] ({self.id}) {self.x}/{self.y}\
+                  - {self.width}/{self.height}"
+
+    def update(self, *args):
+        """ updates the rectangle """
+        _len = len(args) - 1
+        if _len >= 0:
+            self.id = args[0]
+        if _len >= 1:
+            self.width = args[1]
+        if _len >= 2:
+            self.height = args[2]
+        if _len >= 3:
+            self.x = args[3]
+        if _len >= 4:
+            self.y = args[4]
