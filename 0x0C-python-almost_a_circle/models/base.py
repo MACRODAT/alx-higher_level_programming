@@ -3,6 +3,7 @@
 """
     python file for storing data
 """
+import json
 
 
 class Base:
@@ -17,3 +18,9 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+        if not list_dictionaries:
+            return []
+        else:
+            return json.dumps(list_dictionaries)

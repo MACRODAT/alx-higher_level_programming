@@ -25,3 +25,28 @@ class Square(Rectangle):
         """ set the size for value """
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """ updates the rectangle """
+        if args and len(args) > 0:
+            _len = len(args) - 1
+            if _len >= 0:
+                self.id = args[0]
+            if _len >= 1:
+                self.size = args[1]
+            if _len >= 2:
+                self.x = args[2]
+            if _len >= 3:
+                self.y = args[3]
+        elif kwargs:
+            for key, value in kwargs.items():
+                self.__setattr__(key, value)
+
+    def to_dictionary(self):
+        """ dict repres """
+        return {
+            "id" : self.id, 
+            "x" : self.x,
+            "size" : self.size,
+            "y" : self.y,
+        }

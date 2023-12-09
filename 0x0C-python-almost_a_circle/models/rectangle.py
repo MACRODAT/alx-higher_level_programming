@@ -13,9 +13,9 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ class initializer """
         super().__init__(id)
-        self.width = (width)
         self.height = (height)
         self.x = (x)
+        self.width = (width)
         self.y = (y)
 
     @property
@@ -113,3 +113,13 @@ class Rectangle(Base):
         elif kwargs:
             for key, value in kwargs.items():
                 self.__setattr__(key, value)
+
+    def to_dictionary(self):
+        """ dict repres """
+        return {
+            "x" : self.x,
+            "y" : self.y,
+            "id" : self.id, 
+            "height" : self.height,
+            "width" : self.width,
+        }
