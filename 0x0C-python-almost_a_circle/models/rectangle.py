@@ -88,8 +88,8 @@ class Rectangle(Base):
     def __str__(self) -> str:
         """ override """
         return \
-            f"[Rectangle] ({self.id}) {self.x}/{self.y}\
-                  - {self.width}/{self.height}"
+            f"[Rectangle] ({self.id}) {self.x}/{self.y} \
+- {self.width}/{self.height}"
 
     def update(self, *args):
         """ updates the rectangle """
