@@ -5,7 +5,6 @@
 """
 import json
 
-
 class Base:
     """ base class """
     __nb_objects = 0
@@ -68,5 +67,40 @@ class Base:
             with open(filename, "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
                 return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
+    
+    @classmethod
+    def load_from_file_csv(cls):
+        """ get all [cls] """
+        filename = str(cls.__name__) + ".csv"
+        try:
+            objs = []
+            with open(filename, "r") as f:
+                line = f.readline().strip()
+                while line:
+                    splits = [int(x) for x in line.split(',')]
+                    if cls.__name__ == "Rectangle":
+                        dummy = cls(1,1)
+                    else:
+                        dummy = cls(1)
+                    dummy.update(*splits)
+                    objs.append(dummy)
+                    line = f.readline()
+            return objs
+        except IOError:
+            return []
+
+    @classmethod 
+    def save_to_file_csv(cls, list_objs):
+        """ file saver """
+        filename = str(cls.__name__) + ".csv"
+        try:
+            s = ""
+            for o in list_objs:
+                s += f"{o.id},{o.width},{o.height},{o.x},{o.y}\n"
+            s = s[:-1] 
+            with open(filename, "w") as f:
+                f.write(s)
         except IOError:
             return []
