@@ -36,5 +36,5 @@ class Base:
             else:
                 dct = []
                 for o in list_objs:
-                    dct.append([o.to_dictionary()])
+                    dct.append(o.to_dictionary())
                 f.write(cls.to_json_string(dct))
