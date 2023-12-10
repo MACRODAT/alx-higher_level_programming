@@ -19,8 +19,22 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
+        """ json repre """
         if not list_dictionaries:
             return []
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ saves things """
+        with open(cls.__name__ + ".json", "w") as f:
+            if not list_objs:
+                f.write("[]")
+            else:
+                dct = []
+                for o in list_objs:
+                    dct.append([o.to_dictionary()])
+                f.write(cls.to_json_string(dct))
