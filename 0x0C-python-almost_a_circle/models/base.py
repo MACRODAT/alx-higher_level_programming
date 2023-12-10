@@ -5,6 +5,7 @@
 """
 
 import json
+import turtle
 
 
 class Base:
@@ -106,3 +107,35 @@ class Base:
                 f.write(s)
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """shape drawer
+        """
+        shaper = turtle.Turtle()
+        shaper.screen.bgcolor("#010101")
+        shaper.pensize(3)
+        shaper.shape("turtle")
+
+        shaper.color("#ffffff")
+        for rect in list_rectangles:
+            shaper.up()
+            shaper.goto(rect.x, rect.y)
+            shaper.down()
+            for _ in range(2):
+                shaper.forward(rect.width)
+                shaper.left(90)
+                shaper.forward(rect.height)
+                shaper.left(90)
+
+        shaper.color("#400190")
+        for sq in list_squares:
+            shaper.up()
+            shaper.goto(sq.x, sq.y)
+            shaper.down()
+            for _ in range(2):
+                shaper.forward(sq.width)
+                shaper.left(90)
+                shaper.forward(sq.height)
+                shaper.left(90)
+            shaper.hideturtle()
