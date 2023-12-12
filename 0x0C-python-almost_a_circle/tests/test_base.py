@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 import unittest
-from models.base import Base
 import pep8
 import os
+import sys
+
+sys.path.append(os.path.dirname(sys.path[0]))
+
+from models.base import Base
 
 """
 TEST RUNNER
