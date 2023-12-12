@@ -2,16 +2,28 @@
 
 """
     python file for storing data
+    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aenean commodo ligula eget dolor. Aenean massa.
+    Cum sociis natoque
 """
 
 from .base import Base
 
 
 class Rectangle(Base):
-    """ Class defining Rectangle """
+    """ Class defining Rectangle
+      Rectangle class for representing rectangles.
+        :param int width: The width of the rectangle.
+        :param int height: The height of the rectangle.
+        :param int x: The x-coordinate of the rectangle.
+        :param int y: The y-coordinate of the rectangle.
+        :param int id: The identifier of the rectangle.
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ class initializer """
+        """ class initializer
+        param int width: The width of the rectangle.
+        """
         super().__init__(id)
         self.width = (width)
         self.height = (height)
@@ -20,12 +32,20 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width"""
+        """width
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """set width"""
+        """set width
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -34,12 +54,19 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """height"""
+        """height
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """set height"""
+        """set height
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle."""
+
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -48,7 +75,10 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """x"""
+        """x
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle."""
         return self.__x
 
     @x.setter
@@ -62,12 +92,20 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """y"""
+        """y
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
-        """set y"""
+        """y
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -75,11 +113,19 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """ returns area """
+        """y
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         return (self.width * self.height)
 
     def display(self):
-        """display rectangle"""
+        """y
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         y_ = self.y
         while y_:
             print()
@@ -91,13 +137,21 @@ class Rectangle(Base):
             print()
 
     def __str__(self) -> str:
-        """ override """
+        """y
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         return \
             f"[Rectangle] ({self.id}) {self.x}/{self.y} \
 - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
-        """ updates the rectangle """
+        """y
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         if args and len(args) > 0:
             _len = len(args) - 1
             if _len >= 0:
@@ -115,7 +169,11 @@ class Rectangle(Base):
                 self.__setattr__(key, value)
 
     def to_dictionary(self):
-        """ dict repres """
+        """y
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        param int width: The width of the rectangle.
+        """
         return {
             "x": self.x,
             "y": self.y,
