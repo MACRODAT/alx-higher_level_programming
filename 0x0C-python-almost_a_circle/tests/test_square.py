@@ -12,6 +12,7 @@ from models.square import Square
 TEST RUNNER
 """
 
+
 class TestBase(unittest.TestCase):
     """ test runner for Rectangle """
     def setUp(self) -> None:
@@ -26,6 +27,7 @@ class TestBase(unittest.TestCase):
         pep = pep8.StyleGuide(quiet=True)
         p = pep.check_files(['../models/rectangle.py'])
         self.assertEqual(p.total_errors, 1, "Pycodestyle error")
+
     def test_one_arg(self):
         s1 = Square(10)
         s2 = Square(11)
@@ -646,6 +648,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()

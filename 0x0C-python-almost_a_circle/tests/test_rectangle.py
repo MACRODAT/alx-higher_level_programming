@@ -12,6 +12,7 @@ from models.square import Square
 TEST RUNNER
 """
 
+
 class TestBase(unittest.TestCase):
     """ test runner for Rectangle """
     def setUp(self) -> None:
@@ -802,6 +803,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
         r = Rectangle(10, 2, 4, 1, 2)
         with self.assertRaises(TypeError):
             r.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()

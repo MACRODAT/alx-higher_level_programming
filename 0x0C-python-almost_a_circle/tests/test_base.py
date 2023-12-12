@@ -290,5 +290,6 @@ class TestBase_from_json_string(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.from_json_string([], 1)
 
+
 if __name__ == "__main__":
     unittest.main()
