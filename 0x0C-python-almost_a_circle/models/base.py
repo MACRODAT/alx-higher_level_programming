@@ -7,7 +7,11 @@ import turtle
 
 
 class Base:
-    ''' base class '''
+    ''' base class
+    something
+    ject: Changes to the file
+    Date: 2023-12-12 03:09:48 +0100
+    '''
 
 
     __nb_objects = 0
