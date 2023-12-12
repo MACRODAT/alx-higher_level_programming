@@ -3,13 +3,9 @@ import unittest
 import pep8
 import os
 import sys
-
-sys.path.append(os.path.dirname(sys.path[0]))
-sys.path.append(os.path.join(os.path.dirname(sys.path[0]), "models"))
-
-from models.base import Base
-from models.rectangle import Rectangle
-from models.square import Square
+from base import Base
+from rectangle import Rectangle
+from square import Square
 
 """
 TEST RUNNER
