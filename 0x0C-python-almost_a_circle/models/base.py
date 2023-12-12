@@ -12,8 +12,6 @@ class Base:
     ject: Changes to the file
     Date: 2023-12-12 03:09:48 +0100
     '''
-
-
     __nb_objects = 0
 
     def __init__(self, id=None):
