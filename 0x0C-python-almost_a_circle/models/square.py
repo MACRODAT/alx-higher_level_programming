@@ -4,7 +4,7 @@
     python file for storing data
 """
 
-from rectangle import Rectangle
+from .rectangle import Rectangle
 
 
 class Square(Rectangle):

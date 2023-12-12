@@ -3,9 +3,9 @@ import unittest
 import pep8
 import os
 import sys
-from base import Base
-from rectangle import Rectangle
-from square import Square
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 """
 TEST RUNNER

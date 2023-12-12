@@ -4,7 +4,7 @@
     python file for storing data
 """
 
-from base import Base
+from .base import Base
 
 
 class Rectangle(Base):
