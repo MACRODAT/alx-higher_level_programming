@@ -295,4 +295,4 @@ class TestBase_from_json_string(unittest.TestCase):
             Base.from_json_string([], 1)
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=10)
