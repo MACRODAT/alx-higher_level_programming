@@ -1,9 +1,7 @@
 #!/bin/python3
-
 """
     python file for storing data
 """
-
 import json
 import turtle
 
