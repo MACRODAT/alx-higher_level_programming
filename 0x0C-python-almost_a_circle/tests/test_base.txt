@@ -1,18 +1,7 @@
 /home/nesd/.local/lib/python3.10/site-packages/pep8.py:110: FutureWarning: Possible nested set at position 1
   EXTRANEOUS_WHITESPACE_REGEX = re.compile(r'[[({] | []}),;:]')
-.E.
-======================================================================
-ERROR: test_json (__main__.TestBase)
-testing json output
+.....................................................
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/nesd/alx-higher_level_programming/0x0C-python-almost_a_circle/tests/test_base.py", line 51, in test_json
-    b.save_to_file([b])
-  File "/home/nesd/alx-higher_level_programming/0x0C-python-almost_a_circle/models/base.py", line 41, in save_to_file
-    dct.append(o.to_dictionary())
-AttributeError: 'Base' object has no attribute 'to_dictionary'
+Ran 53 tests in 0.012s
 
-----------------------------------------------------------------------
-Ran 3 tests in 0.001s
-
-FAILED (errors=1)
+OK
