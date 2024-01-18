@@ -1,9 +1,5 @@
--- Lists all cities of CA in the database hbtn_0d_usa.
--- Results are ordered by ascending cities.id.
+-- Ld
 SELECT `id`, `name`
   FROM `cities`
- WHERE `state_id` IN
-       (SELECT `id`
-	  FROM `states`
-	 WHERE `name` = "California")
+ INNER JOIN `states` ON `cities`.`state_id` == `states`.`id`
  ORDER BY `id`;
