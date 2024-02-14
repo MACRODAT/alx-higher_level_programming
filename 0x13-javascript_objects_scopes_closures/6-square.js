@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// class Square that defines a square and inherits from Square
+// square
 
 const Square_ = require('./5-square');
 

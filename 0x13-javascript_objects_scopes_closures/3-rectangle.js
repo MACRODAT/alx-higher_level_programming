@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Script class Rectangle that defines a rectangle
+// rectangle
 
 const Rectangle = class Rectangle {
   constructor (w, h) {

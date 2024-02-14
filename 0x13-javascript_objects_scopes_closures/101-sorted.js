@@ -1,6 +1,5 @@
 #!/usr/bin/node
-// Script imports a dictionary of occurrences by user id
-// and computes a dictionary of user ids by occurrence.
+// scpt
 
 const { dict } = require('./101-data.js');
 const Dictn = {};
