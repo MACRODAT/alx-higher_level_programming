@@ -10,13 +10,13 @@ const Rectangle = class Rectangle {
   }
 
   print () {
-    let prints = '';
+    let out_ = '';
     for (let cont1 = 0; cont1 < this.height; cont1++) {
       for (let cont = 0; cont < this.width; cont++) {
-        prints = prints + 'X';
+        out_ = out_ + 'X';
       }
-      console.log(prints);
-      prints = '';
+      console.log(out_);
+      out_ = '';
     }
   }
 };

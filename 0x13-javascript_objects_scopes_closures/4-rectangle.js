@@ -10,13 +10,13 @@ class Rectangle {
   }
 
   print () {
-    let i, j, string;
+    let i, j, str;
     for (i = 0; i < this.height; i++) {
-      string = '';
+      str = '';
       for (j = 0; j < this.width; j++) {
-        string += 'X';
+        str += 'X';
       }
-      console.log(string);
+      console.log(str);
     }
   }
 

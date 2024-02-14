@@ -7,8 +7,8 @@ const Square = class Square extends Square_ {
   charPrint (c) {
     if (c) {
       let prints = '';
-      for (let cont = 0; cont < this.height; cont++) {
-        for (let cont = 0; cont < this.height; cont++) {
+      for (let i = 0; i < this.height; i++) {
+        for (let i = 0; i < this.height; i++) {
           prints = prints + c;
         }
         console.log(prints);
