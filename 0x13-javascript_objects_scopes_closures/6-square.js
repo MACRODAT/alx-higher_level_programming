@@ -6,13 +6,13 @@ const Square_ = require('./5-square');
 const Square = class Square extends Square_ {
   charPrint (c) {
     if (c) {
-      let prints = '';
+      let out_ = '';
       for (let i = 0; i < this.height; i++) {
         for (let i = 0; i < this.height; i++) {
-          prints = prints + c;
+          out_ = out_ + c;
         }
-        console.log(prints);
-        prints = '';
+        console.log(out_);
+        out_ = '';
       }
     } else {
       super.print();
