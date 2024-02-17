@@ -13,7 +13,7 @@ if __name__ == "__main__":
     cur.execute(""" SELECT cities.id, cities.name, states.name
                 FROM cities INNER JOIN states ON
                 cities.state_id = states.id
-                WHERE = '%s'
+                WHERE states.name LIKE %s
                 ORDER BY cities.id ASC
     """, (argv[4], ))
     query_rows = cur.fetchall()
