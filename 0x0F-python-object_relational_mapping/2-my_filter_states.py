@@ -16,7 +16,7 @@ if __name__ == "__main__":
                          user=username, passwd=password, db=db_name)
     cur = db.cursor()
     cur.execute("""SELECT * FROM states
-                WHERE name = '{:s}'
+                WHERE name LIKE '{:s}'
                 ORDER BY id ASC""".format(state_name))
     r = cur.fetchall()
     for state in r:
