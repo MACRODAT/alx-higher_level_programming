@@ -11,7 +11,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    engine = create_engine(url=
+    engine = create_engine(url=f""
                            f"mysql+mysqldb://{argv[1]}:{argv[2]}@"
                            f"localhost:3306/{argv[3]}")
     Base.metadata.create_all(engine)
