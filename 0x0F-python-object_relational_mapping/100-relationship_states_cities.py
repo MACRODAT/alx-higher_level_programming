@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-All states via SQLAlchemy
+All state
 """
 from sys import argv
 from relationship_state import Base, State
