@@ -1,6 +1,6 @@
 #!/bin/bash
 # sends a POST req
-# curl -s -H "Content-Type: application/json" -d "$(cat "$2")" "$1"
+# curl -s -H "Content-Type: application/json" -d "$(cat "$2")" "$1"	
 # Color code variables
 RED='\033[0;31m'
 # GREEN='\033[0;32m'
@@ -19,4 +19,4 @@ fi
 # echo -e "${BLUE}Starting request...${NC}";
 URL=$1
 
-curl -sS "$URL" | wc -c
+curl -sI "$URL" | grep -i content-length | cut -d " " -f 2
