@@ -6,26 +6,26 @@
 def find_peak(list_of_integers):
     """
     Args:
-        list_of_integers(int): list of integers to find peak of
-    Returns: peak of list_of_integers or None
+        list_of_integers(int): lst
+    Returns: pk of list_of_integers
     """
-    size = len(list_of_integers)
-    mid_e = size
-    mid = size // 2
+    sz = len(list_of_integers)
+    middle = sz
+    mid = sz // 2
 
-    if size == 0:
+    if sz == 0:
         return None
 
     while True:
-        mid_e = mid_e // 2
-        if (mid < size - 1 and
+        middle = middle // 2
+        if (mid < sz - 1 and
                 list_of_integers[mid] < list_of_integers[mid + 1]):
-            if mid_e // 2 == 0:
-                mid_e = 2
-            mid = mid + mid_e // 2
-        elif mid_e > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
-            if mid_e // 2 == 0:
-                mid_e = 2
-            mid = mid - mid_e // 2
+            if middle // 2 == 0:
+                middle = 2
+            mid = mid + middle // 2
+        elif middle > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
+            if middle // 2 == 0:
+                middle = 2
+            mid = mid - middle // 2
         else:
             return list_of_integers[mid]
