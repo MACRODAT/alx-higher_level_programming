@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends a request to a URL, and displays only the status code of the response.
+# sends a request to a URL display response
 curl -s -o /dev/null -w "%{response_code}" "$1"
