@@ -7,8 +7,9 @@ let request = require('request');
 request(reqURL, function (err, response, body) {
   if (err) {
     console.error(err);
-    let jso = JSON.parse(body);
-    let results = jso['results'];
+  } else {
+    let json = JSON.parse(body);
+    let results = json['results'];
     let count = 0;
     for (let i = 0; i < results.length; i++) {
       let chars = (results[i]['characters']);
